@@ -1,4 +1,27 @@
 #GET
-http://127.0.0.1:8888
+# /api/v1/bootcamps
+#Show All Bootcamps
+http://127.0.0.1:8888/api/v1/bootcamps
+###
+#POST
+# /api/v1/bootcamps
+#Create new Bootcamp 
+http://127.0.0.1:8888/api/v1/bootcamps
+###
+#PUT
+# /api/v1/bootcamps/:id
+#Update bootcamp
+http://127.0.0.1:8888/api/v1/bootcamps/1
 
 ###
+#GET
+# /api/v1/bootcamps/:id
+# Get single bootcamp by id
+http://127.0.0.1:8888/api/v1/bootcamps/1
+
+###
+
+#DELETE
+# /api/v1/bootcamps/:id
+# Delete bootcamp by id
+http://127.0.0.1:8888/api/v1/bootcamps/1
