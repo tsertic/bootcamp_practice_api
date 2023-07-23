@@ -7,21 +7,47 @@ GET http://127.0.0.1:8888/api/v1/bootcamps
 # /api/v1/bootcamps
 #Create new Bootcamp 
 POST http://127.0.0.1:8888/api/v1/bootcamps
+content-type: application/json
+
+{
+"name": "Devcentral Bootcamp",
+		"description": "Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development",
+		"website": "https://devcentral.com",
+		"phone": "(444) 444-4444",
+		"email": "enroll@devcentral.com",
+		"address": "45 Upper College Rd Kingston RI 02881",
+		"careers": [
+			"Mobile Development",
+			"Web Development",
+			"Data Science",
+			"Business"
+		],
+		"housing": false,
+		"jobAssistance": true,
+		"jobGuarantee": true,
+		"acceptGi": true
+        }
+
 ###
 #PUT
 # /api/v1/bootcamps/:id
 #Update bootcamp
-PUT http://127.0.0.1:8888/api/v1/bootcamps/1
+PUT http://127.0.0.1:8888/api/v1/bootcamps/64bd224401f989b54091e634
+content-type:application/json
+
+{
+	"housing":true
+}
 
 ###
 #GET
 # /api/v1/bootcamps/:id
 # Get single bootcamp by id
-GET http://127.0.0.1:8888/api/v1/bootcamps/1
+GET http://127.0.0.1:8888/api/v1/bootcamps/64bd224401f989b54091e634
 
 ###
 
 #DELETE
 # /api/v1/bootcamps/:id
 # Delete bootcamp by id
-DELETE http://127.0.0.1:8888/api/v1/bootcamps/1
+DELETE http://127.0.0.1:8888/api/v1/bootcamps/64bd224401f989b54091e634

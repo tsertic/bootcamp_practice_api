@@ -16,10 +16,6 @@ const bootcampSchema = new mongoose.Schema({
   },
   website: {
     type: String,
-    match: [
-      /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$]/,
-      "Please enter valid url",
-    ],
   },
   phone: {
     type: String,
@@ -37,11 +33,10 @@ const bootcampSchema = new mongoose.Schema({
     type: {
       type: String, // Don't do `{ location: { type: String } }`
       enum: ["Point"], // 'location.type' must be 'Point'
-      required: true,
     },
     coordinates: {
       type: [Number],
-      required: true,
+
       index: "2dsphere",
     },
     formattedAddress: String,

@@ -13,7 +13,8 @@ connectDB();
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use("/api/v1/bootcamps", router);
 app.get("/", (req, res) => {
   console.log(req.protocol, req.originalUrl);
